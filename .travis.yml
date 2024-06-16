@@ -2,10 +2,10 @@ sudo: required
 env:
   global:
     - NODE_OPTIONS="--dns-result-order=ipv4first"
-    
+
 services:
   - docker
 
 script:
-  - docker build -t algofields/node .
+  - docker build --ulimit nofile=65536:65536 -t algofields/node .
   - docker images algofields/node
