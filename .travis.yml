@@ -7,5 +7,5 @@ services:
   - docker
 
 script:
-  - docker build --ulimit nofile=65536:65536  -t algofields/node .
+  - docker build -t algofields/node .
   - docker images algofields/node
