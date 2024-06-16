@@ -9,5 +9,6 @@ services:
 
  
 script:
+  - docker --version
   - docker build -t algofields/node .
   - docker images algofields/node
